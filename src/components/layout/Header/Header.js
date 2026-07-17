@@ -32,15 +32,9 @@ export default function Header() {
         <div className={`${styles.headerInner}`}>
           <Link href="/" className={styles.logo}>
             <Image
-              src={"/logo/logo_h.png"}
-              // src={
-              //   isSticky
-              //     ? "https://cdn.prod.website-files.com/65f8604debf8d297844a6352/6607cb05449188ec73b9e87f_Colored%20Logo.svg"
-              //     : "https://cdn.prod.website-files.com/65f8604debf8d297844a6352/6607bc9b9d59d5c624804b9d_WhiteLogo.svg"
-              // }
-              alt="My Desk Logo"
+              src="/logo/logo_h.png"
+              alt="Nirvag Pro Logo"
               className={styles.logoImg}
-              // priority
             />
           </Link>
 
