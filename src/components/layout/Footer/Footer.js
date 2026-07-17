@@ -10,10 +10,11 @@ export default function Footer() {
         <div className={styles.footerLeft}>
           <Link href="/" className={styles.footerBrand}>
             <Image 
-              src="https://cdn.prod.website-files.com/65f8604debf8d297844a6352/6607cb05449188ec73b9e87f_Colored%20Logo.svg"
-              alt="My Desk Logo"
-              width={120}
-              height={32}
+              src="/logo/logo_h.png"
+              alt="Nirvag Pro Logo"
+              width={160}
+              height={40}
+              style={{ objectFit: 'contain', objectPosition: 'left' }}
               className={styles.footerLogo}
             />
           </Link>
@@ -47,7 +48,7 @@ export default function Footer() {
           </div>
           
           <div className={styles.copyright}>
-            Copyright 2024 Mydesk
+            Copyright 2024 Nirvag Pro
           </div>
         </div>
         
