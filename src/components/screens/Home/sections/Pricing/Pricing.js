@@ -5,7 +5,7 @@ import styles from "./Pricing.module.scss";
 import Image from "next/image";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { Check, CheckCheck } from "lucide-react";
-import CustomContainer from '@/components/ui/CustomContainer/CustomContainer';
+import CustomContainer from "@/components/ui/CustomContainer/CustomContainer";
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
@@ -94,7 +94,7 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section className={styles.pricingSection} id="Pricing">
+    <section className={styles.pricingSection}>
       <CustomContainer>
         <div className={styles.pricingContainer}>
           {/* Trust Pilot Reviews Card */}
@@ -156,7 +156,11 @@ export default function Pricing() {
           </div>
 
           {/* Pricing Blocks */}
-          <div className={styles.pricingComponentsWrapper} data-aos="fade-left">
+          <div
+            className={styles.pricingComponentsWrapper}
+            data-aos="fade-left"
+            id="Pricing"
+          >
             <h3 className={styles.title}>Simple and easy pricing</h3>
             <p className={styles.paragraphLarge}>
               The most competitively priced product in the market
@@ -221,7 +225,7 @@ export default function Pricing() {
 
                     <div className={styles.pricingBtnWrapper}>
                       <CustomButton
-                        href="/signup"
+                        href="/login?signup=true"
                         variant={pkg.recommended ? "primary" : "secondary"}
                         style={{ display: "block", width: "100%" }}
                       >

@@ -1,6 +1,5 @@
 @use "./scss/variables" as *;
 @use "./scss/media_queries" as *;
-
 :root {
   --primary: #{$primary};
   --primary-hover: #{$primary-hover};
