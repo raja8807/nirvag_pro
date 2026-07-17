@@ -1,0 +1,72 @@
+@use "./scss/variables" as *;
+@use "./scss/media_queries" as *;
+
+:root {
+  --primary: #{$primary};
+  --primary-hover: #{$primary-hover};
+  --secondary: #{$secondary};
+  --accent: #{$accent};
+
+  --background: #{$background};
+  --foreground: #{$foreground};
+  --surface: #{$surface};
+  --surface-hover: #{$surface-hover};
+  --border: #{$border};
+  --text-muted: #{$text-size-muted};
+
+  --dark-background: #{$dark-background};
+  --dark-background-2: #{$dark-background-2};
+  --dark-foreground: #{$dark-foreground};
+  --dark-surface: #{$dark-surface};
+  --dark-border: #{$dark-border};
+  --dark-text-muted: #{$dark-text-muted};
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+  color: $foreground;
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  transition:
+    background-color $transition-default,
+    color $transition-default;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $space-md;
+}
+
+.text-highlight {
+  color: $primary;
+}

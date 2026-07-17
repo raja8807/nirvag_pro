@@ -1,0 +1,163 @@
+.faqsSection {
+  padding: $space-xxl 0;
+  background-color: $background;
+}
+
+.faqsRow {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxl;
+  align-items: flex-start;
+
+  @include respond-above(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.faqsTextWrapper {
+  flex: 1;
+  max-width: 450px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxl;
+}
+
+.title {
+  font-size: $text-size-3xl;
+  font-weight: 800;
+  color: $foreground;
+  line-height: 1.2;
+
+  @include respond-above(md) {
+    font-size: $text-size-4xl;
+  }
+}
+
+.faqsLinksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.contactTitle {
+  font-size: $text-size-lg;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.faqsLinkBlocksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  width: 100%;
+}
+
+.faqsLinkBlock {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  background-color: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: $space-md $space-lg;
+  text-decoration: none;
+  transition: all $transition-fast;
+  width: 100%;
+  max-width: 300px;
+
+  &:hover {
+    background-color: $surface-hover;
+    border-color: $foreground;
+  }
+}
+
+.contactIcon {
+  flex-shrink: 0;
+}
+
+.contactText {
+  font-size: $text-size-sm;
+  font-weight: 600;
+  color: $foreground;
+}
+
+/* Right Accordions */
+.accordionsWrapper {
+  flex: 1.2;
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionBlock {
+  border-bottom: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-lg 0;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $foreground;
+  text-align: left;
+  gap: $space-md;
+}
+
+.questionText {
+  font-size: $text-size-lg;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.accordionArrow {
+  color: $foreground;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.arrowOpen {
+    transform: rotate(-180deg);
+    color: $primary;
+  }
+}
+
+.paraWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  width: 100%;
+
+  &.paraOpen {
+    max-height: 500px;
+    transition: max-height 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+}
+
+.spacing20 {
+  height: 20px;
+}
+
+.spacing35 {
+  height: 35px;
+}
+
+.answerText {
+  font-size: $text-size-sm;
+  color: $text-size-muted;
+  line-height: 1.6;
+}

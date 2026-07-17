@@ -1,0 +1,396 @@
+.pricingSection {
+  padding: $space-xxl 0;
+  background-color: $background;
+}
+
+.pricingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxl;
+}
+
+/* Trust Pilot Section */
+.trustPilotReviewWrapper {
+  background-color: $accent;
+  border: 1px solid $border;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-xl;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+  align-items: center;
+
+  @include respond-above(lg) {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+}
+
+.trustPilotScoreWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xs;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.scoreNumber {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: $foreground;
+}
+
+.starsImg {
+  object-fit: contain;
+}
+
+.scoreTitle {
+  font-size: $text-size-sm;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.reviewsCount {
+  font-size: $text-size-xs;
+  color: $text-size-muted;
+}
+
+.dividerLine {
+  background-color: $border;
+  width: 100%;
+  height: 1px;
+  margin: 0;
+
+  @include respond-above(lg) {
+    width: 1px;
+    height: 15.313rem;
+  }
+}
+
+.reviewSlider {
+  width: 100%;
+  flex: 1;
+}
+
+.reviewSlide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-lg;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.reviewerImageWrapper {
+  flex-shrink: 0;
+  border-radius: 100px;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+}
+
+.reviewerImg {
+  object-fit: cover;
+}
+
+.reviewTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  text-align: left;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.ratingNumber {
+  font-size: $text-size-sm;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.paragraphLarge {
+  font-size: $text-size-base;
+  color: $foreground;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.reviewerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewerName {
+  font-size: $text-size-sm;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.reviewerRole {
+  font-size: $text-size-xs;
+  color: $text-size-muted;
+}
+
+/* Pricing Blocks */
+.pricingComponentsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-lg;
+  width: 100%;
+}
+
+.title {
+  font-size: $text-size-3xl;
+  font-weight: 800;
+  color: $foreground;
+  text-align: center;
+  margin-bottom: 0;
+
+  @include respond-above(md) {
+    font-size: $text-size-4xl;
+  }
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  background-color: $surface;
+  border: 1px solid $border;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin: $space-md 0;
+}
+
+.periodLabel {
+  font-size: $text-size-sm;
+  font-weight: 600;
+  color: $text-size-muted;
+  transition: color $transition-fast;
+
+  &.activePeriod {
+    color: $foreground;
+    font-weight: 700;
+  }
+}
+
+.toggleSwitch {
+  width: 50px;
+  height: 26px;
+  background-color: $border;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color $transition-fast;
+  padding: 0;
+
+  .switchCircle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: $accent;
+    border-radius: 100px;
+    box-shadow: $shadow-sm;
+    transition: transform $transition-default;
+  }
+
+  &.yearlyActive {
+    background-color: $primary;
+
+    .switchCircle {
+      transform: translate3d(24px, 0, 0);
+    }
+  }
+}
+
+.pricingCardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+  width: 100%;
+  margin-top: $space-md;
+
+  @include respond-above(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-above(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricingCard {
+  background-color: $accent;
+  border: 1px solid $border;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-md;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  text-align: left;
+  position: relative;
+  transition: all $transition-default;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-xl;
+  }
+
+  &.recommended {
+    border-color: $primary;
+    box-shadow: $shadow-xl;
+    background-image: url("https://assets-global.website-files.com/65f8604debf8d297844a6352/66069de06e1c721df92c7b0d_Recommended.svg");
+    background-position: 95% 12px;
+    background-repeat: no-repeat;
+    background-size: 7.813rem 2rem;
+  }
+}
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.cardName {
+  font-size: $text-size-2xl;
+  font-weight: 800;
+  color: $foreground;
+}
+
+.cardSub {
+  font-size: $text-size-sm;
+  color: $text-size-muted;
+}
+
+.pricingDivider {
+  background-color: $foreground;
+  opacity: 0.1;
+  width: 100%;
+  height: 1px;
+}
+
+.pricingListDiv {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  height: 100%;
+}
+
+.priceDiv {
+  display: flex;
+  align-items: baseline;
+  color: $foreground;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.priceVal {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.period {
+  font-size: $text-size-sm;
+  color: $text-size-muted;
+  margin-left: $space-xs;
+}
+
+.pointsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  margin-bottom: auto;
+}
+
+.pointWrapper {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.checkmark {
+  background-color: rgba(0, 177, 114, 0.1);
+  color: $primary;
+  border-radius: 100px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 3px;
+}
+
+.featText {
+  font-size: $text-size-sm;
+  color: $text-size-muted;
+}
+
+.pricingBtnWrapper {
+  margin-top: $space-md;
+}
+
+.primaryBtn {
+  background-color: $primary;
+  color: $accent;
+  border: 0.125rem solid $primary;
+  text-align: center;
+  border-radius: 6.25rem;
+  padding: 0.813rem 1.625rem;
+  font-size: $text-size-sm;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  transition: all $transition-default;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.secondaryBtn {
+  background-color: $foreground;
+  color: $accent;
+  border: 0.125rem solid $foreground;
+  text-align: center;
+  border-radius: 6.25rem;
+  padding: 0.813rem 1.625rem;
+  font-size: $text-size-sm;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  transition: all $transition-default;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    color: $foreground;
+  }
+}

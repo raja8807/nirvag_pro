@@ -1,0 +1,146 @@
+.featureSection {
+  padding: $space-xxl 0;
+  background-color: $background;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xxl;
+}
+
+.sectionTitle {
+  font-size: $text-size-3xl;
+  font-weight: 800;
+  color: $foreground;
+  text-align: center;
+
+  @include respond-above(md) {
+    font-size: $text-size-4xl;
+  }
+}
+
+.featureBlocksWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+
+  @include respond-above(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-above(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureBlock {
+  border-radius: $radius-lg;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  box-shadow: $shadow-sm;
+  transition: all $transition-default;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md;
+  }
+
+  &.withoutBottomPadding {
+    padding-bottom: 0;
+
+    @include respond-above(lg) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+.colorLightYellow {
+  background-color: $color-light-yellow;
+}
+
+.colorLightPurple {
+  background-color: $color-light-purple;
+}
+
+.colorLightBlue {
+  background-color: $color-light-blue;
+}
+
+.colorLightGreen {
+  background-color: $color-light-green;
+}
+
+.colorLightPink {
+  background-color: $color-light-pink;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.featureTitle {
+  font-size: $text-size-xl;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.paragraph {
+  font-size: $text-size-sm;
+  color: $text-size-muted;
+  line-height: 1.6;
+}
+
+.imageWrapper {
+  margin-top: auto;
+  width: 100%;
+  max-width: 450px;
+  align-self: center;
+}
+
+.featureImg {
+  border-radius: $radius-md $radius-md 0 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.ctaWrapper {
+  margin-top: $space-md;
+}
+
+.primaryButton {
+  background-color: $foreground;
+  color: $accent;
+  border: 0.125rem solid $foreground;
+  text-align: center;
+  border-radius: 6.25rem;
+  padding: 0.813rem 1.625rem;
+  font-size: 1.063rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  transition: all $transition-default;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    color: $foreground;
+  }
+}

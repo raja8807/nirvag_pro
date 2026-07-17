@@ -1,0 +1,117 @@
+// Color Palette based on Webflow Template
+$primary: #00b172; // Bright green
+$primary-hover: #00935d;
+$secondary: #000000;
+$accent: #ffffff;
+
+// Light Theme (Default Body)
+$background: #ffffff;
+$foreground: #242635; // Headings
+$surface: #f9fafb;
+$surface-hover: #f3f4f6;
+$border: #e5e7eb;
+$text--muted: #525468; // Body Text
+
+// Dark Theme (For specific sections like Hero, Demo, Benefits)
+// Based on exact Webflow bg-gradient CSS
+$dark-background: #145055;
+$dark-background-2: #0c4347;
+$dark-foreground: #ffffff;
+$dark-surface: rgba(255, 255, 255, 0.05);
+$dark-border: rgba(255, 255, 255, 0.1);
+$dark-text-muted: rgba(255, 255, 255, 0.7);
+
+//---------------------------------------------------------------------------------
+// Primary Brand
+$primary: #0ba8b5;
+$primary-hover: #0895a1;
+
+// Secondary Brand
+$secondary: #0f2c66;
+$secondary-hover: #12397e;
+
+// Accent
+// $accent: #38c6d3;
+$accent: #fdfbf9;
+
+// Neutral
+$background: #fcfcfd;
+$foreground: #101828;
+$surface: #f8fafc;
+$surface-hover: #f1f5f9;
+$border: #e2e8f0;
+$text-size-muted: #667085;
+
+// Dark Theme
+$dark-background: #071b3a;
+$dark-background-2: #0d2d57;
+$dark-foreground: #ffffff;
+$dark-surface: rgba(255, 255, 255, 0.05);
+$dark-border: rgba(255, 255, 255, 0.08);
+$dark-text-muted: rgba(255, 255, 255, 0.68);
+//---------------------------------------------------------------------------------
+
+$gradient-primary: linear-gradient(135deg, #0f2c66 0%, #0ba8b5 100%);
+
+$gradient-hero: linear-gradient(180deg, #071b3a 0%, #0d2d57 55%, #0ba8b5);
+
+$gradient-card: linear-gradient(
+  135deg,
+  rgba(11, 168, 181, 0.12),
+  rgba(15, 44, 102, 0.06)
+);
+
+// Specific accent colors from features section
+$color-light-yellow: #fffadd;
+$color-light-purple: #ecedfe;
+$color-light-blue: #ceeef5;
+$color-light-green: #ecf9f5;
+$color-light-pink: #ffe1f8;
+$color-yellow: #f2c94c;
+$color-red: #eb5757;
+
+// Spacing System
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-xxl: 4rem;
+$space-xxxl: 8rem;
+
+// Typography (Sizes)
+$text-size-xs: 0.75rem;
+$text-size-sm: 0.875rem;
+$text-size-base: 1rem;
+$text-size-md: 1.1rem;
+$text-size-lg: 1.125rem;
+$text-size-xl: 1.25rem;
+$text-size-2xl: 1.5rem;
+$text-size-3xl: 1.875rem;
+$text-size-4xl: 2.25rem;
+$text-size-5xl: 3rem;
+$text-size-6xl: 4rem;
+
+// Border Radius
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;
+$radius-lg: 0.938rem;
+$radius-xl: 1.25rem;
+$radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg:
+  0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl:
+  0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Transitions
+$transition-fast: 150ms ease-in-out;
+$transition-default: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;

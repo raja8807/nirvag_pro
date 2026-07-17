@@ -1,0 +1,199 @@
+.demoSection {
+  z-index: 1;
+  background-image:
+    url("https://assets-global.website-files.com/65f8604debf8d297844a6352/6613b37d05a7260457082bd8_Demo%20Curve.svg"),
+    linear-gradient($dark-background, $dark-background-2);
+  background-position:
+    50% -1%,
+    0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: contain, auto;
+  margin-top: -1rem;
+  padding-top: 23.438rem;
+  padding-bottom: 20.938rem;
+  position: relative;
+  color: $dark-foreground;
+
+  @include respond-below(lg) {
+    background-size: 105%, auto;
+    padding-top: 15rem;
+    padding-bottom: 12rem;
+  }
+
+  @include respond-below(md) {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.demoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxl;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxl;
+  align-items: center;
+
+  @include respond-above(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.textWrapper {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.title {
+  font-size: $text-size-3xl;
+  font-weight: 800;
+  color: $dark-foreground;
+  margin-bottom: $space-md;
+  line-height: 1.2;
+
+  @include respond-above(md) {
+    font-size: $text-size-4xl;
+  }
+}
+
+.paragraphLarge {
+  font-size: $text-size-lg;
+  color: $dark-text-muted;
+  line-height: 1.6;
+  margin-bottom: $space-xl;
+}
+
+.btnsWrapper {
+  display: flex;
+  align-items: center;
+  gap: $space-xl;
+}
+
+.playLink {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  color: $dark-foreground;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.playIconWrapper {
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonText {
+  font-size: $text-size-sm;
+}
+
+.primaryButton {
+  background-color: $primary;
+  color: $accent;
+  border: 0.125rem solid $primary;
+  text-align: center;
+  border-radius: 6.25rem;
+  padding: 0.813rem 1.625rem;
+  font-size: 1.063rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  transition: all $transition-default;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.imageWrapper {
+  flex: 1.2;
+  width: 100%;
+  max-width: 665px;
+}
+
+.demoImage {
+  border-radius: $radius-lg;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Trusted leaders logos marquee */
+.trustedWrapper {
+  margin-top: $space-xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-lg;
+}
+
+.trustedTitle {
+  font-size: $text-size-xs;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.logoMarqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.logoRow {
+  display: flex;
+  gap: 3.5rem;
+  animation: logoScroll 20s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+
+@keyframes logoScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.partnerLogo {
+  opacity: 0.6;
+  transition: opacity $transition-fast;
+  object-fit: contain;
+
+  &:hover {
+    opacity: 1;
+  }
+}

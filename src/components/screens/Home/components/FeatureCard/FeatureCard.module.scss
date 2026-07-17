@@ -1,0 +1,43 @@
+.card {
+  background-color: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: $space-xl;
+  transition: all $transition-default;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+    border-color: $primary;
+  }
+}
+
+.iconContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-md;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $space-lg;
+  font-size: $text-size-2xl;
+  font-weight: bold;
+}
+
+.title {
+  font-size: $text-size-xl;
+  font-weight: 700;
+  color: $foreground;
+  margin-bottom: $space-sm;
+}
+
+.description {
+  color: $text-size-muted;
+  line-height: 1.5;
+  font-size: $text-size-base;
+}

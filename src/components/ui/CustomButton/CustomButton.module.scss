@@ -1,0 +1,50 @@
+.btn {
+  display: inline-block;
+  border-radius: 6.25rem;
+  font-weight: 700;
+  text-align: center;
+  transition: all $transition-default;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0.125rem solid transparent;
+  line-height: 1.625rem;
+}
+
+.primary {
+  background-color: $primary;
+  color: white;
+  border-color: $primary;
+  padding: 0.813rem 1.625rem;
+  font-size: 1.063rem;
+
+  &:hover {
+    background-color: white;
+    color: $primary;
+  }
+}
+
+.secondary {
+  background-color: $foreground;
+  color: $accent;
+  border-color: $foreground;
+  padding: 0.813rem 1.625rem;
+  font-size: 1.063rem;
+
+  &:hover {
+    background-color: transparent;
+    color: $foreground;
+  }
+}
+
+.small {
+  padding: 6px 20px;
+  font-size: $text-size-sm;
+  background-color: $primary;
+  color: white;
+  border-color: $primary;
+
+  &:hover {
+    background-color: white;
+    color: $primary;
+  }
+}

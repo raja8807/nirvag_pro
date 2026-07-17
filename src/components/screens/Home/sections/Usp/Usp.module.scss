@@ -1,0 +1,99 @@
+.uspSection {
+  padding: $space-xxl 0;
+  background-color: $background;
+}
+
+.uspContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxl;
+}
+
+.uspBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xl;
+
+  @include respond-above(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4.5rem;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.textCol {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.upperHeading {
+  // font-size: $text-size-md;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: $primary;
+  display: inline-block;
+}
+
+.title {
+  font-size: $text-size-3xl;
+  font-weight: 600;
+  color: $foreground;
+  // margin-bottom: $space-md;
+  line-height: 1.2;
+
+  @include respond-above(md) {
+    font-size: $text-size-5xl;
+  }
+}
+
+.paragraph {
+  font-size: $text-size-md;
+  color: $text-size-muted;
+  line-height: 1.6;
+  // margin-bottom: $space-lg;
+}
+
+.pointsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.checkmark {
+  flex-shrink: 0;
+}
+
+.list {
+  font-size: $text-size-base;
+  color: $foreground;
+  font-weight: 600;
+}
+
+.imageCol {
+  flex: 1;
+  width: 100%;
+  max-width: 560px;
+}
+
+.image {
+  border-radius: $radius-lg;
+  object-fit: cover;
+  width: 100%;
+}

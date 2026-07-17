@@ -1,0 +1,180 @@
+.productivitySection {
+  z-index: 5;
+  background-image:
+    url("https://assets-global.website-files.com/65f8604debf8d297844a6352/6607c62a40e39c6921d796b8_Bg%20curve%201.svg"),
+    linear-gradient($color-light-green 35%, rgba($color-light-green, 0));
+  background-position:
+    50% -5px,
+    0 0;
+  background-repeat: repeat-x, repeat;
+  background-size: 100%, auto;
+  margin-top: -1rem;
+  padding-bottom: 10.438rem;
+  position: relative;
+}
+
+.productivityContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 1030px;
+  margin-top: -11rem;
+  z-index: 10;
+  position: relative;
+
+  @include respond-below(md) {
+    margin-top: -3rem;
+  }
+}
+
+.productivityImage {
+  object-fit: cover;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4.5rem;
+  padding-top: 3.4375rem;
+  position: relative;
+
+  // @include respond-above(lg) {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: flex-start;
+  // }
+}
+
+.textWrapper {
+  flex: 1;
+  max-width: 600px;
+  // text-align: left;
+  text-align: center;
+}
+
+.title {
+  font-size: $text-size-5xl;
+  // font-weight: 800;
+  color: $foreground;
+  letter-spacing: 1px;
+  margin-bottom: $space-md;
+  line-height: 1.2;
+
+  @include respond-below(md) {
+    font-size: $text-size-4xl;
+  }
+}
+
+.paragraphLarge {
+  font-size: $text-size-lg;
+  color: $text-size-muted;
+  line-height: 1.7;
+  letter-spacing: 0.7;
+  margin-top: 50px;
+  font-weight: 600;
+
+  @include respond-below(md) {
+    font-size: $text-size-md;
+  }
+}
+
+.blocksWrapper {
+  flex: 1.2;
+  display: flex;
+
+  gap: $space-lg;
+  width: 100%;
+
+  @include respond-below(md) {
+    flex-direction: column;
+  }
+}
+
+.block {
+  background-color: $accent;
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  box-shadow: $shadow-md;
+  border: 1px solid $border;
+  transition: all $transition-default;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+
+    .animateLine {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &.optimizationTag {
+    background-image: url("https://assets-global.website-files.com/65f8604debf8d297844a6352/6606b594da3b9fb44d63fa39_New%20Tag.svg");
+    background-position: 95% 17px;
+    background-repeat: no-repeat;
+    background-size: 2.813rem 1.125rem;
+  }
+}
+
+.iconWrapper {
+  width: max-content;
+  background-color: $surface;
+  padding: $space-sm;
+  border-radius: $radius-md;
+}
+
+.blockTitle {
+  font-size: $text-size-xl;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.paragraphSmall {
+  font-size: $text-size-sm;
+  color: $text-size-muted;
+  line-height: 1.6;
+}
+
+.linkWrapper {
+  display: flex;
+  margin-top: $space-xs;
+}
+
+.ternaryButton {
+  display: inline-flex;
+  flex-direction: column;
+  color: $foreground;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.buttonSmall {
+  font-size: $text-size-sm;
+}
+
+.animateLineWrapper {
+  height: 2px;
+  width: 100%;
+  background-color: $border;
+  margin-top: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.animateLine {
+  height: 100%;
+  width: 100%;
+  background-color: $primary;
+  transform: translate3d(-100%, 0px, 0px);
+  transition: transform $transition-default;
+}

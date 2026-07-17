@@ -1,0 +1,95 @@
+.ctaSection {
+  z-index: 1;
+  background-image:
+    url("https://assets-global.website-files.com/65f8604debf8d297844a6352/6606b92462019b1b0932eb6d_CTA%20Curve.svg"),
+    url("https://assets-global.website-files.com/65f8604debf8d297844a6352/6606b7a42e720d532b7cd24c_svg%20pattern.svg"),
+    linear-gradient($dark-background, $dark-background-2);
+  background-position:
+    50% -1%,
+    50% 100%,
+    0 0;
+  background-repeat: repeat-x, repeat-x, repeat;
+  background-size: 105%, auto, auto;
+  padding-top: 25.313rem;
+  padding-bottom: 10.938rem;
+  position: relative;
+  text-align: center;
+  color: $dark-foreground;
+
+  @include respond-below(lg) {
+    padding-top: 18rem;
+    padding-bottom: 8rem;
+  }
+
+  @include respond-below(md) {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xl;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: $text-size-4xl;
+  font-weight: 800;
+  line-height: 1.2;
+  color: $dark-foreground;
+}
+
+.ctaButtonWrapper {
+  margin-top: $space-sm;
+}
+
+.primaryButton {
+  background-color: $primary;
+  color: $accent;
+  border: 0.125rem solid $primary;
+  text-align: center;
+  border-radius: 6.25rem;
+  padding: 0.813rem 1.625rem;
+  font-size: 1.063rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  transition: all $transition-default;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.ctaRatingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.ctaRatingWrapper {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.scoreText {
+  font-size: $text-size-sm;
+  font-weight: 700;
+  color: $dark-foreground;
+}
+
+.starsImg {
+  object-fit: contain;
+}
+
+.downloadText {
+  font-size: $text-size-sm;
+  color: $dark-text-muted;
+}
